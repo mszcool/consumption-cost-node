@@ -6,7 +6,7 @@ Reading all events for a specific transaction id:
 
 ```sql
 customEvents
-| extend tranId = customDimensions.corrid
+| extend tranId = customDimensions.trnId
 | order by timestamp desc
 | where tranId == 'a guid'
 ```
@@ -16,7 +16,7 @@ Reading all exceptions for the same transaction as above:
 ```sql
 exceptions
 | extend errJson = parse_json(outerMessage)
-| extend trnId = errJson.properties.corrid
+| extend trnId = errJson.properties.trnId
 | order by timestamp desc
 | where trnId == 'a guid'
 ```
