@@ -1,10 +1,11 @@
 {
 	"version": "1.0.0",
-	"name": "BillingCost-Node",
+	"name": "billingcostnodemsz",
 	"private": true,
 	"dependencies": {
-		"ms-rest-azure": "2.5.0",
+		"applicationinsights": "^1.0.2",
 		"azure-arm-commerce": "1.1.0",
-		"json2csv":"3.11.5"
+		"ms-rest-azure": "2.5.0",
+		"uuid": "^3.2.1"
 	}
 }
