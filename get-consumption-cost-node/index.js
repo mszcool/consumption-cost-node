@@ -33,8 +33,8 @@ module.exports = function (context, req) {
     //
     // Setup AppInsights
     //
-    var appInsights = new AppInsightsHelper("get-consumption-cost-node", trnId);
-    appInsights.startAppInsights();
+    var appInsights = new AppInsightsUtil("get-consumption-cost-node", trnId);
+    appInsights.startAppInsights(context);
     appInsights.logCustomEvent("initialize", "starting function execution after appInsights initialization!");
 
     //

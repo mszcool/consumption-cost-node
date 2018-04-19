@@ -13,7 +13,7 @@ module.exports = class AppInsightsHelper {
         };
     }
 
-    startAppInsights() {
+    startAppInsights(context) {
         context.log("---- msz appinsights setup ----")
         context.log(process.env.APPINSIGHTS_INSTRUMENTATIONKEY);
         if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY === undefined) {
